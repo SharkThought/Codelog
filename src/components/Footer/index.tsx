@@ -1,19 +1,10 @@
-import { useIntl } from 'umi';
 import { GithubOutlined } from '@ant-design/icons';
 import { DefaultFooter } from '@ant-design/pro-layout';
 
 const Footer: React.FC = () => {
-  const intl = useIntl();
-  const defaultMessage = intl.formatMessage({
-    id: 'app.copyright.produced',
-    defaultMessage: '蚂蚁集团体验技术部出品',
-  });
-
-  const currentYear = new Date().getFullYear();
-
   return (
     <DefaultFooter
-      copyright={`${currentYear} ${defaultMessage}`}
+      copyright="2022 Codelog制作团队技术出品"
       links={[
         {
           key: 'Ant Design Pro',
@@ -22,9 +13,9 @@ const Footer: React.FC = () => {
           blankTarget: true,
         },
         {
-          key: 'github',
+          key: 'GitHub',
           title: <GithubOutlined />,
-          href: 'https://github.com/ant-design/ant-design-pro',
+          href: 'https://github.com/SharkThought/Codelog',
           blankTarget: true,
         },
         {
